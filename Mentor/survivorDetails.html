@@ -80,7 +80,7 @@
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1.25;
-  color: #00449e;
+  color:#3ac162;
   box-sizing: border-box;
 }
 
@@ -242,7 +242,7 @@
       <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
         <header class="modal__header">
           <h2 class="modal__title" id="modal-1-title">
-            Micromodal
+            Book your chat
           </h2>
           <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
         </header>
@@ -250,7 +250,7 @@
           <div id='calendar'></div>
         </main>
         <footer class="modal__footer">
-          <button class="modal__btn modal__btn-primary">Continue</button>
+          <button class="modal__btn modal__btn-primary" data-micromodal-close>Continue</button>
           <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
         </footer>
       </div>
@@ -338,20 +338,41 @@ There is a way out. It is not easy, but at the end of the day, it is worth it. T
       </div>
     </section><!-- End Cource Details Section -->
     <script>
+      var userSelection = null;
       document.addEventListener('DOMContentLoaded', function() {
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
           initialView: 'timeGridWeek',
           editable: true,
+          initialDate: '2020-11-07',
+          firstDay: 1,
+          selectable: true,
           headerToolbar: {
             left: 'prev,next today',
             center: 'title'
           },
+          select: function(info) {
+            calendar.addEvent({
+              title: 'dynamic event',
+              start: info.startStr,
+              end: info.endStr
+            });
+          },
           events: [
             {
-              title: 'All Day Event',
-              start: '2020-11-06T10:30:00',
-              end: '2020-11-06T12:30:00'
+              title: 'Booked',
+              start: '2020-11-07T10:30:00',
+              end: '2020-11-07T12:30:00'
+            },
+            {
+              title: 'Booked',
+              start: '2020-11-07T13:30:00',
+              end: '2020-11-07T14:30:00'
+            },
+            {
+              title: 'Booked',
+              start: '2020-11-07T14:30:00',
+              end: '2020-11-07T15:30:00'
             }
           ],
           schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives'
