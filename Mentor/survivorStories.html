@@ -36,13 +36,11 @@
   ======================================================== -->
 
   <style>
-    section{
-      padding: 0 !important;
-    }
+
     .photo-list {
       display: flex;
       width: 100%;
-      height: 100vh;
+      height: 450px;
       position: relative;
     }
 
@@ -69,19 +67,13 @@
     .photo {
       filter: grayscale(100%) brightness(80%);
       height: 100%;
-      /*width: 100%;
-      object-position: left;*/
+      width: 100%;
+      object-position: left;
       object-fit: cover;
-    }
-    .photo-container:hover .img-container {
-        transform: none;
     }
 
     .img-container{
       width: fit-content;
-      height: 100%;
-      transform: translate(-15%);
-      transition: transform 0.25s;
     }
 
     .description-content{
@@ -112,7 +104,12 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li class="active"><a href="stories.html">Stories</a></li>
+          <li class="drop-down active"><a href="">Stories</a>
+            <ul>
+              <li><a href="survivorStories.html">Survivors</a></li>
+              <li><a href="professionalStories.html">Professionals</a></li>
+            </ul>
+          </li>
           <li><a href="supportGroups.html">Support Groups</a></li>
           <li><a href="shareYourStory.html">Share Your Story</a></li>
           <li><a href="resources.html">Resources</a></li>
@@ -127,8 +124,18 @@
   </header><!-- End Header -->
 
   <main id="main" data-aos="fade-in">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs">
+      <div class="container">
+        <h2>Happy story tellers</h2>
+        <p>People that won their fight with addiction and live to tell the tale.</p>
+      </div>
+    </div><!-- End Breadcrumbs -->
+
     <!-- ======= Trainers Section ======= -->
     <section id="trainers" class="trainers">
+      <div class="container">
         <div class="photo-list">
           <div class="photo-container">
             <div class="img-container">
@@ -178,8 +185,158 @@
               s
             </div>
           </div>
+        </div>
       </div>
     </section><!-- End Trainers Section -->
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs no-top-margin">
+      <div class="container">
+        <h2>Psychotherapists</h2>
+        <p>You need professional advice? We got you covered.</p>
+      </div>
+    </div><!-- End Breadcrumbs -->
+    <!-- ======= Trainers Section ======= -->
+    <section id="trainers" class="trainers">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4><a href="trainer-details.html">Walter White</a></h4>
+                <span>Web Development</span>
+                <p>
+                  Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                </p>
+                <div class="social">
+                  <a href=""><i class="icofont-twitter"></i></a>
+                  <a href=""><i class="icofont-facebook"></i></a>
+                  <a href=""><i class="icofont-instagram"></i></a>
+                  <a href=""><i class="icofont-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/img/trainers/trainer-2.jpg" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4><a href="trainer-details.html">Sarah Jhinson</a></h4>
+                <span>Marketing</span>
+                <p>
+                  Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
+                </p>
+                <div class="social">
+                  <a href=""><i class="icofont-twitter"></i></a>
+                  <a href=""><i class="icofont-facebook"></i></a>
+                  <a href=""><i class="icofont-instagram"></i></a>
+                  <a href=""><i class="icofont-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/img/trainers/trainer-3.jpg" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4><a href="trainer-details.html">William Anderson</a></h4>
+                <span>Content</span>
+                <p>
+                  Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
+                </p>
+                <div class="social">
+                  <a href=""><i class="icofont-twitter"></i></a>
+                  <a href=""><i class="icofont-facebook"></i></a>
+                  <a href=""><i class="icofont-instagram"></i></a>
+                  <a href=""><i class="icofont-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Trainers Section -->
+
+    <!-- ======= Breadcrumbs ======= -->
+    <div class="breadcrumbs no-top-margin">
+      <div class="container">
+        <h2>Social workers</h2>
+        <p>Do you have some questions? We are here to help.</p>
+      </div>
+    </div><!-- End Breadcrumbs -->
+    <!-- ======= Trainers Section ======= -->
+    <section id="trainers" class="trainers">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/img/trainers/trainer-1.jpg" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4><a href="trainer-details.html">Walter White</a></h4>
+                <span>Web Development</span>
+                <p>
+                  Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                </p>
+                <div class="social">
+                  <a href=""><i class="icofont-twitter"></i></a>
+                  <a href=""><i class="icofont-facebook"></i></a>
+                  <a href=""><i class="icofont-instagram"></i></a>
+                  <a href=""><i class="icofont-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/img/trainers/trainer-2.jpg" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4><a href="trainer-details.html">Sarah Jhinson</a></h4>
+                <span>Marketing</span>
+                <p>
+                  Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
+                </p>
+                <div class="social">
+                  <a href=""><i class="icofont-twitter"></i></a>
+                  <a href=""><i class="icofont-facebook"></i></a>
+                  <a href=""><i class="icofont-instagram"></i></a>
+                  <a href=""><i class="icofont-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="member">
+              <img src="assets/img/trainers/trainer-3.jpg" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4><a href="trainer-details.html">William Anderson</a></h4>
+                <span>Content</span>
+                <p>
+                  Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
+                </p>
+                <div class="social">
+                  <a href=""><i class="icofont-twitter"></i></a>
+                  <a href=""><i class="icofont-facebook"></i></a>
+                  <a href=""><i class="icofont-instagram"></i></a>
+                  <a href=""><i class="icofont-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Trainers Section -->
+
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
