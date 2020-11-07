@@ -22,12 +22,16 @@
         width: 100%;
       }
 
+      .photo-container:hover .photo {
+        filter: none;
+      }
+
       .photo-list:hover .photo-container:not(:hover){
         width: 5%;
       }
 
       .photo {
-        filter: grayscale(100%);
+        filter: grayscale(100%) brightness(80%);
         height: 100%;
         object-fit: cover;
       }
