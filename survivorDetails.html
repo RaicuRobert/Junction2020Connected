@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Course Details - Mentor Bootstrap Template</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Mentor - v2.1.0
+  * Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+  <link href='assets/js/calendar/lib/main.css' rel='stylesheet' />
+  <script src='assets/js/calendar/lib/main.js'></script>
+  <script src='https://unpkg.com/micromodal/dist/micromodal.min.js'></script>
+  <style>
+#calendar {
+  height: 100%;
+}
+.modal {
+  font-family: -apple-system,BlinkMacSystemFont,avenir next,avenir,helvetica neue,helvetica,ubuntu,roboto,noto,segoe ui,arial,sans-serif;
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 4px;
+  overflow-y: auto;
+  box-sizing: border-box;
+  width: 90vw;
+  height: 90vh;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  color:#3ac162;
+  box-sizing: border-box;
+}
+
+.modal__close {
+  background: transparent;
+  border: 0;
+}
+
+.modal__header .modal__close:before { content: "\2715"; }
+
+.modal__content {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  height: 80%;
+  line-height: 1.5;
+  color: rgba(0,0,0,.8);
+}
+
+.modal__btn {
+  font-size: .875rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+  background-color: #e6e6e6;
+  color: rgba(0,0,0,.8);
+  border-radius: .25rem;
+  border-style: none;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-appearance: button;
+  text-transform: none;
+  overflow: visible;
+  line-height: 1.15;
+  margin: 0;
+  will-change: transform;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  transition: -webkit-transform .25s ease-out;
+  transition: transform .25s ease-out;
+  transition: transform .25s ease-out,-webkit-transform .25s ease-out;
+}
+
+.modal__btn:focus, .modal__btn:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.modal__btn-primary {
+  background-color: #3ac162;
+  color: #fff;
+}
+
+
+
+/**************************\
+  Demo Animation Style
+\**************************/
+@keyframes mmfadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@keyframes mmfadeOut {
+    from { opacity: 1; }
+      to { opacity: 0; }
+}
+
+@keyframes mmslideIn {
+  from { transform: translateY(15%); }
+    to { transform: translateY(0); }
+}
+
+@keyframes mmslideOut {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10%); }
+}
+
+.micromodal-slide {
+  display: none;
+}
+
+.micromodal-slide.is-open {
+  display: block;
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+  animation: mmfadeIn .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__container {
+  animation: mmslideIn .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+  animation: mmfadeOut .3s cubic-bezier(0.0, 0.0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__container {
+  animation: mmslideOut .3s cubic-bezier(0, 0, .2, 1);
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+  will-change: transform;
+} 
+  </style>
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  rel="stylesheet">
+<style>
+  .photo {
+    width: 100%; 
+    height: auto;
+  }
+
+  .blockquote {
+    padding: 60px 40px 40px;
+    position: relative;
+}
+.blockquote p {
+    font-family: "Utopia-italic";
+    font-size: 25px;
+    font-weight: 700px;
+    text-align: center;
+}
+
+
+
+.blockquote:before {
+  position: absolute;
+  font-family: 'FontAwesome';
+  top: 0;
+  
+  content:"\f10d";
+  font-size: 100px;
+  color: rgba(0,0,0,0.1);
+   
+}
+
+.blockquote::after {
+    content: "";
+    top: 20px;
+    left: 50%;
+    margin-left: -100px;
+    position: absolute;
+    border-bottom: 3px solid #3ac162;
+    height: 3px;
+    width: 200px;
+}
+
+</style>
+</head>
+
+<body>
+  <div class="modal micromodal-slide" id="modal-1" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-1-title">
+        <header class="modal__header">
+          <h2 class="modal__title" id="modal-1-title">
+            Book your chat
+          </h2>
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
+        </header>
+        <main class="modal__content" id="modal-1-content">
+          <div id='calendar'></div>
+        </main>
+        <footer class="modal__footer">
+          <button class="modal__btn modal__btn-primary" data-micromodal-close>Continue</button>
+          <button class="modal__btn" data-micromodal-close aria-label="Close this dialog window">Close</button>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+      <img class="plant-logo" src="assets/img/logo.png"></img>
+      <h1 class="logo mr-auto"><a href="index.html">Tell Me</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="drop-down active"><a href="survivorStories.html">Stories</a>
+            <ul>
+              <li><a href="survivorStories.html">Survivors</a></li>
+              <li><a href="professionalStories.html">Professionals</a></li>
+            </ul>
+          </li>
+          <li><a href="supportGroups.html">Support Groups</a></li>
+          <li><a href="shareYourStory.html">Share Your Story</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="myAccount.html">My Account</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+      
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <!-- <div class="breadcrumbs" data-aos="fade-in">
+      <div class="container">
+        <h2>We all have a story.</h2>
+        <p>It's what we make of it that counts!</p>
+      </div>
+    </div>End Breadcrumbs -->
+
+    <!-- ======= Cource Details Section ======= -->
+    <section id="course-details" class="course-details">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+            <div class="col-lg-6">
+              <img class="photo" src="assets\img\survivors\austin-wade.jpg">
+            </div>
+            <div class="col-lg-6 align-self-center">
+                <div class="text-center d-flex justify-content-center align-items-center">
+                  <h2 class="m-0 mr-3">John Doe</h2>
+                  <button type="button" class="btn btn-success" data-micromodal-trigger="modal-1">Book a chat</button>
+                </div>
+                <blockquote class="blockquote"><p>Today, I strive to be a light of hope and have the ability to share my own personal experience with others in hopes of leading others towards a better way of life</p></blockquote>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <h3>My Story</h3>
+            <p id="story"></p>
+            <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+            <script>
+              const element = document.getElementById('story');
+              element.innerHTML =
+                marked(`  I was an only child, the nerdy kid growing up, and didn’t really feel as if I fit in with anyone specific group of people. I wanted to be accepted, so I started hanging out with the cool kids and partying. It just kind of took off from there. It went from an occasional thing to every chance kinda thing. I went from smoking weed, to smoking weed and drinking, to doing anything I could get my hands on. I found freedom in getting high and for the first time in my life, I was comfortable. As things progressed with time, I became addicted and fell in love with opiates. I started using Oxycontin in 2009 which eventually led to me using heroin. My addiction to heroin took priority over everything I did in life. I died a total of 15 times due to drug overdose. One would think that overdosing time and time again would give someone the desire to get clean. In reality, I wanted to die. I absolutely hated the person that I had become as a result of my addiction to drugs and alcohol.
+
+I’ve been arrested numerous times for multiple DUIs, shoplifting, petit larceny, possession, driving on revoked for DUI, and harboring a fugitive from justice. I was on a total path of destruction. I have been in a total of 7 treatment programs and multiple detox centers. Trying over and over to put my life back together.
+
+In April of 2019, I went back to jail on a home confinement violation because I was getting high in another program and I was just tired. For the first time in my life, I felt completely defeated. So, when I went in in April, I surrendered and turned to God for help. I was ready for a different direction in life and was tired of doing the same thing over and over. I was tired of hurting people, hurting family, and not being able to be a dad because addiction ran my life. I decided at that point that if I was given another opportunity to try to put my life back together that I was going to take it and run with it.
+
+I did about 130 days in jail and was given yet another opportunity to change my life. I entered a long term treatment program with Recovery Point and began my journey in changing my life. Today I have over 9 months completely substance-free. Everything changed for me this time around, I had the gift of desperation and was willing to do whatever was asked of me in order to achieve long term sobriety. I remember laying in jail, praying for God to help me, and absolutely willing to do whatever it took for a new direction in life. Instead of viewing it as a consequence, I viewed it as an opportunity.
+
+TODAY: I have been given my life back. I am rebuilding relationships with my family. I am rebuilding trust. I am able to be a dad today and a positive influence in my son’s life. I continue to work towards cleaning up the wreckage of my past. I’m a Recovery Coach and can be a point of light in a world of darkness and watch others transform as they find their purpose in life.
+
+There is a way out. It is not easy, but at the end of the day, it is worth it. There is a lot more to living life than to get up and to worry about putting the next one in you. No matter what, at the end of the day, the reality is still there. It is something that you have to face. It is just a matter of trying to reach out for help and get guidance on how to face it. There is freedom in the fact that you can wake up every day with a clear conscience that you did not deliberately harm somebody the day before for selfish benefit. Today, I strive to be a light of hope and have the ability to share my own personal experience with others in hopes of leading others towards a better way of life.
+`);
+            </script>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Cource Details Section -->
+    <script>
+      var userSelection = null;
+      document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'timeGridWeek',
+          editable: true,
+          initialDate: '2020-11-07',
+          firstDay: 1,
+          selectable: true,
+          headerToolbar: {
+            left: 'prev,next today',
+            center: 'title'
+          },
+          eventColor: '#3ac162',
+          select: function(info) {
+            calendar.addEvent({
+              title: 'Meeting',
+              start: info.startStr,
+              end: info.endStr
+            });
+          },
+          events: [
+            {
+              title: 'Booked',
+              start: '2020-11-07T10:30:00',
+              end: '2020-11-07T12:30:00'
+            },
+            {
+              title: 'Booked',
+              start: '2020-11-07T13:30:00',
+              end: '2020-11-07T14:30:00'
+            },
+            {
+              title: 'Booked',
+              start: '2020-11-07T14:30:00',
+              end: '2020-11-07T15:30:00'
+            }
+          ],
+          schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives'
+        });
+        
+        MicroModal.init({
+          onShow: modal => {
+            calendar.render();
+          }
+        });
+      });
+
+    </script>
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container d-md-flex py-4">
+
+      <div class="mr-md-auto text-center text-md-left">
+        <div class="copyright">
+          &copy; Copyright <strong><span>Mentor</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/ -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="bx bx-up-arrow-alt"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  
+</body>
+
+</html>
