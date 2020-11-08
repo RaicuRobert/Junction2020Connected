@@ -75,6 +75,22 @@
       <h2>We are a species of story-tellers and story-lovers. <br> 
       Not all our stories are easy to listen to, but all are worth it.</h2>
       <h1>So tell me a story about addiction.</h1>
+      <button type="button" class="btn btn-success mt-2" id="read-more">Read more</button>
+      <script>
+        window.addEventListener('load', (event) => {
+          document.getElementById("read-more").onclick = function() {
+            var element = document.getElementById('main');
+            var headerOffset = 65;
+            var elementPosition = element.getBoundingClientRect().top;
+            var offsetPosition = elementPosition - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+          }
+        });
+      </script>
     </div>
   </section><!-- End Hero -->
 
